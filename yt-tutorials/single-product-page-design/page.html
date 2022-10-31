@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single product page design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+    <span><h2>WE ARE DREAMERS</h2></span>
+    <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">SHOP</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">CONTACT</a></li>
+    </ul>
+</div>
+<div class="container">
+    <div class="right-box">
+        <div class="main-image-box">
+            <img src="img/3l1.avif" id="mainImage" class="main-image"></div>
+<div class="small-images">
+    <div class="image-box"><img src="img/3l1.avif" class="image"></div>
+    <div class="image-box"><img src="img/3l2.avif" class="image"></div>
+    <div class="image-box"><img src="img/3l3.avif" class="image"></div>
+    <div class="image-box"><img src="img/3l4.avif" class="image"></div>
+</div>
+    </div>
+    <div class="details-box">
+        <h1>3LANDERS NFT project</h1>
+        <p>Availablity (MINTED OUT)</p>
+        <h2>buy now at floor price (999 Ethereum + gas fee)</h2>
+        <table cellspacing="0" class="inputs">
+            <tr>
+                <td>Quantity</td>
+                <td align="right"><input type="number" id="first"></td>
+            </tr>
+            <tr>
+                <td>Sub total</td>
+                <td align="right"><input type="number" id="second"></td>
+            </tr>
+            <tr>
+                <td>Royalty fee 2.5%</td>
+                <td align="right"><input type="number" id="third"></td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td align="right"><input type="number" id="fourth"></td>
+            </tr>
+        </table>
+        <h4>Roadmap</h4>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Expedita pariatur est nulla incidunt quas consequuntur quisquam.
+            Velit dolorem est veritatis quod consequuntur qui, libero, a illum,
+            fugiat ut aut. Iure.
+        </p>
+        <button>Add to wallet</button>
+
+    </div>
+
+</div>
+    <script>
+        let mainImage = document.getElementById("mainImage")
+        let smallImage = document.getElementsByClassName("image")
+        smallImage[0].onclick = ()=>{
+            mainImage.src = smallImage[0].src;
+        }
+        smallImage[1].onclick = ()=>{
+            mainImage.src = smallImage[1].src;
+        }
+        smallImage[2].onclick = ()=>{
+            mainImage.src = smallImage[2].src;
+        }
+        smallImage[3].onclick = ()=>{
+            mainImage.src = smallImage[3].src;
+        }
+
+        function cart(){
+            var a,b,c,d;
+            a=document.getElementById("first").value;
+            
+            b=a*999;
+            document.getElementById("second").value=b;
+
+            c=(b*2.5)/100;
+            document.getElementById("third").value=c;
+
+            d=b+c;
+            document.getElementById("fourth").value=d;
+        }
+
+        let ans= document.getElementById("first");
+        ans.addEventListener('keyup',cart);
+
+    </script>
+</body>
+</html>
